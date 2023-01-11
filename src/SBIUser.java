@@ -3,7 +3,7 @@ import java.util.UUID;
 
 public class SBIUser implements BankInterface {
 
-    // attributes
+    // attributes --> getter & setter
     private String name;
     private String accountNo;
     private double balance;
@@ -32,8 +32,8 @@ public class SBIUser implements BankInterface {
     }
 
     @Override
-    public String withdrawnMoney(int amount, String enteredpassword) {
-        if(Objects.equals(enteredpassword, password)){
+    public String withdrawnMoney(int amount, String enteredPassword) {
+        if(Objects.equals(enteredPassword, password)){
             if(amount > balance)
                 return "Insufficient money";
             else{
@@ -47,8 +47,8 @@ public class SBIUser implements BankInterface {
     }
 
     @Override
-    public double calculateInterest(int year) {
-        return (balance*year*rateOfInterest)/100;
+    public double calculateInterest(int years) {
+        return (balance*years*rateOfInterest)/100;
     }
 
     public String getName() {

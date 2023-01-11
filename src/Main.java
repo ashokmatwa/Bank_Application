@@ -23,8 +23,10 @@ public class Main {
         String pass = sc.next();
         System.out.println(user.withdrawnMoney(money, pass));
 
-        System.out.println(user.checkBalance());
+        System.out.println("remaining paisa : "+user.checkBalance());
         //rate of interest
-        System.out.println(user.calculateInterest(10));
+        System.out.println("rate of interest : "+user.calculateInterest(10));
+
+        HDFCUser user2 = new HDFCUser(name, balance, password);
     }
 }

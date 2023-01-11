@@ -4,5 +4,6 @@ public interface BankInterface {
     double checkBalance();
     String addMoney(int amount);
     String withdrawnMoney(int amount, String  password);
-    double calculateInterest(int year);
+    double calculateInterest(int years);
+
 }
