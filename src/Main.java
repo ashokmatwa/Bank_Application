@@ -11,6 +11,7 @@ public class Main {
         String password = sc.next();
         double balance = sc.nextDouble();
         SBIUser user = new SBIUser(name, balance, password);
+        System.out.println("accoutn no : "+user.getAccountNo());
 
         //add money
         String message = user.addMoney(100000);
@@ -19,13 +20,13 @@ public class Main {
         //withdraw money
         System.out.println("enter amount to withdraw");
         int money = sc.nextInt();
-        System.out.println("enter your pasword");
+        System.out.println("enter your password");
         String pass = sc.next();
         System.out.println(user.withdrawnMoney(money, pass));
 
         System.out.println("remaining paisa : "+user.checkBalance());
-        //rate of interest
-        System.out.println("rate of interest : "+user.calculateInterest(10));
+        /* rate of interest */
+        System.out.println("rate of interest for 10 years : "+user.calculateInterest(10));
 
         HDFCUser user2 = new HDFCUser(name, balance, password);
     }
