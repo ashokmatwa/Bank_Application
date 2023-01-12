@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //System.out.println("Hello world!");
+//        System.out.println("Hello world!");
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter your name, password, balance to create account");
 
@@ -30,6 +30,5 @@ public class Main {
 
         HDFCUser user2 = new HDFCUser(name, balance, password);
 
-        System.out.println("this is a change");
     }
 }
