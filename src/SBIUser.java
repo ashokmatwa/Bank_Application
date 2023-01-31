@@ -51,6 +51,23 @@ public class SBIUser implements BankInterface {
         return (balance*years*rateOfInterest)/100;
     }
 
+
+    public String transferMoney(int amount, String enteredPassword, HDFCUser user2) {
+        if(Objects.equals(enteredPassword, password)){
+            if(amount > balance)
+                return "Insufficient money";
+            else{
+                balance = balance - amount;
+                System.out.println(balance);
+                System.out.println(user2.addMoney(amount));
+                return "andha paisa";
+            }
+        }
+        else{
+            return "wrong password";
+        }
+    }
+
     public String getName() {
         return name;
     }

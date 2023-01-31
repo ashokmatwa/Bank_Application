@@ -27,7 +27,7 @@ public class HDFCUser implements BankInterface {
     @Override
     public String addMoney(int amount) {
         balance = balance + amount;
-        return "updated balance : "+balance;
+        return "updated balance in HDFC : "+balance;
     }
 
     @Override
